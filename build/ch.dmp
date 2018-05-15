@@ -1,0 +1,916 @@
+
+build/ch.elf:     file format elf32-littlearm
+build/ch.elf
+architecture: arm, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x000000c1
+
+Program Header:
+0x70000001 off    0x0001fc10 vaddr 0x0000fc10 paddr 0x0000fc10 align 2**2
+         filesz 0x000001c8 memsz 0x000001c8 flags r--
+    LOAD off    0x00010000 vaddr 0x00000000 paddr 0x00000000 align 2**16
+         filesz 0x0000fdd8 memsz 0x0000fdd8 flags rwx
+    LOAD off    0x00020800 vaddr 0x20000800 paddr 0x0000fdd8 align 2**16
+         filesz 0x0000026c memsz 0x0000026c flags rw-
+    LOAD off    0x00020a70 vaddr 0x20000a70 paddr 0x00010044 align 2**16
+         filesz 0x00000000 memsz 0x000059f8 flags rw-
+    LOAD off    0x00030000 vaddr 0x20000000 paddr 0x20000000 align 2**16
+         filesz 0x00000000 memsz 0x00008000 flags rw-
+private flags = 5000200: [Version5 EABI] [soft-float ABI]
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .mstack       00000400  20000000  20000000  00030000  2**0
+                  ALLOC
+  1 .pstack       00000400  20000400  20000400  00030000  2**0
+                  ALLOC
+  2 .vectors      000000b0  00000000  00000000  00010000  2**7
+                  CONTENTS, ALLOC, LOAD, DATA
+  3 .xtors        00000008  000000b0  000000b0  000100b0  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  4 .text         0000dcc6  000000c0  000000c0  000100c0  2**4
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  5 .rodata       00001e28  0000dd88  0000dd88  0001dd88  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  6 .ARM.extab    00000060  0000fbb0  0000fbb0  0001fbb0  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  7 .ARM.exidx    000001c8  0000fc10  0000fc10  0001fc10  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  8 .data         0000026c  20000800  0000fdd8  00020800  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  9 .bss          000059f8  20000a70  00010044  00020a70  2**4
+                  ALLOC
+ 10 .ram0_init    00000000  20006468  20006468  00020a6c  2**2
+                  CONTENTS
+ 11 .ram0         00000000  20006468  20006468  00020a6c  2**2
+                  CONTENTS
+ 12 .ram1_init    00000000  00000000  00000000  00020a6c  2**2
+                  CONTENTS
+ 13 .ram1         00000000  00000000  00000000  00020a6c  2**2
+                  CONTENTS
+ 14 .ram2_init    00000000  00000000  00000000  00020a6c  2**2
+                  CONTENTS
+ 15 .ram2         00000000  00000000  00000000  00020a6c  2**2
+                  CONTENTS
+ 16 .ram3_init    00000000  00000000  00000000  00020a6c  2**2
+                  CONTENTS
+ 17 .ram3         00000000  00000000  00000000  00020a6c  2**2
+                  CONTENTS
+ 18 .ram4_init    00000000  00000000  00000000  00020a6c  2**2
+                  CONTENTS
+ 19 .ram4         00000000  00000000  00000000  00020a6c  2**2
+                  CONTENTS
+ 20 .ram5_init    00000000  00000000  00000000  00020a6c  2**2
+                  CONTENTS
+ 21 .ram5         00000000  00000000  00000000  00020a6c  2**2
+                  CONTENTS
+ 22 .ram6_init    00000000  00000000  00000000  00020a6c  2**2
+                  CONTENTS
+ 23 .ram6         00000000  00000000  00000000  00020a6c  2**2
+                  CONTENTS
+ 24 .ram7_init    00000000  00000000  00000000  00020a6c  2**2
+                  CONTENTS
+ 25 .ram7         00000000  00000000  00000000  00020a6c  2**2
+                  CONTENTS
+ 26 .heap         00001b98  20006468  20006468  00030000  2**0
+                  ALLOC
+ 27 .ARM.attributes 0000002d  00000000  00000000  00020a6c  2**0
+                  CONTENTS, READONLY
+ 28 .comment      0000007f  00000000  00000000  00020a99  2**0
+                  CONTENTS, READONLY
+ 29 .debug_info   00060d74  00000000  00000000  00020b18  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 30 .debug_abbrev 000086d7  00000000  00000000  0008188c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 31 .debug_loc    000143a4  00000000  00000000  00089f63  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 32 .debug_aranges 00000f70  00000000  00000000  0009e307  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 33 .debug_ranges 000015e8  00000000  00000000  0009f277  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 34 .debug_line   0000dd3c  00000000  00000000  000a085f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 35 .debug_str    0000c10e  00000000  00000000  000ae59b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 36 .debug_frame  000037b4  00000000  00000000  000ba6ac  2**2
+                  CONTENTS, READONLY, DEBUGGING
+SYMBOL TABLE:
+20000000 l    d  .mstack	00000000 .mstack
+20000400 l    d  .pstack	00000000 .pstack
+00000000 l    d  .vectors	00000000 .vectors
+000000b0 l    d  .xtors	00000000 .xtors
+000000c0 l    d  .text	00000000 .text
+0000dd88 l    d  .rodata	00000000 .rodata
+0000fbb0 l    d  .ARM.extab	00000000 .ARM.extab
+0000fc10 l    d  .ARM.exidx	00000000 .ARM.exidx
+20000800 l    d  .data	00000000 .data
+20000a70 l    d  .bss	00000000 .bss
+20006468 l    d  .ram0_init	00000000 .ram0_init
+20006468 l    d  .ram0	00000000 .ram0
+00000000 l    d  .ram1_init	00000000 .ram1_init
+00000000 l    d  .ram1	00000000 .ram1
+00000000 l    d  .ram2_init	00000000 .ram2_init
+00000000 l    d  .ram2	00000000 .ram2
+00000000 l    d  .ram3_init	00000000 .ram3_init
+00000000 l    d  .ram3	00000000 .ram3
+00000000 l    d  .ram4_init	00000000 .ram4_init
+00000000 l    d  .ram4	00000000 .ram4
+00000000 l    d  .ram5_init	00000000 .ram5_init
+00000000 l    d  .ram5	00000000 .ram5
+00000000 l    d  .ram6_init	00000000 .ram6_init
+00000000 l    d  .ram6	00000000 .ram6
+00000000 l    d  .ram7_init	00000000 .ram7_init
+00000000 l    d  .ram7	00000000 .ram7
+20006468 l    d  .heap	00000000 .heap
+00000000 l    d  .ARM.attributes	00000000 .ARM.attributes
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_loc	00000000 .debug_loc
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_ranges	00000000 .debug_ranges
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    df *ABS*	00000000 vectors.c
+00002c1e l       .text	00000000 _MSP
+00002c22 l       .text	00000000 _GetPC
+00000000 l    df *ABS*	00000000 gpsThread.cpp
+0000bf90 l     F .text	00000040 _ZL28setup_transfer_descriptor_rxP14DmacDescriptorPv
+0000c520 l     F .text	00000010 _GLOBAL__sub_I_usart_gps
+00000000 l    df *ABS*	00000000 mpuThread.cpp
+0000cbc0 l     F .text	00000010 _GLOBAL__sub_I_imuStatus
+20001e18 l     O .bss	00000028 imuData
+00000000 l    df *ABS*	00000000 build/obj/crt0_v6m.o
+000000e6 l       .text	00000000 msloop
+000000f0 l       .text	00000000 endmsloop
+000000f4 l       .text	00000000 psloop
+000000fe l       .text	00000000 endpsloop
+00000104 l       .text	00000000 dloop
+00000112 l       .text	00000000 enddloop
+00000118 l       .text	00000000 bloop
+00000122 l       .text	00000000 endbloop
+0000012e l       .text	00000000 initloop
+0000013a l       .text	00000000 endinitloop
+00000142 l       .text	00000000 finiloop
+0000014e l       .text	00000000 endfiniloop
+00000000 l    df *ABS*	00000000 build/obj/chcoreasm_v6m.o
+e000ed04 l       *ABS*	00000000 SCB_ICSR
+10000000 l       *ABS*	00000000 ICSR_PENDSVSET
+80000000 l       *ABS*	00000000 ICSR_NMIPENDSET
+00000000 l    df *ABS*	00000000 _udivsi3.o
+000001d4 l       .text	00000000 .udivsi3_skip_div0_test
+00000000 l    df *ABS*	00000000 _divsi3.o
+000002e8 l       .text	00000000 .divsi3_skip_div0_test
+00000000 l    df *ABS*	00000000 _dvmd_tls.o
+00000000 l    df *ABS*	00000000 _arm_cmpsf2.o
+00000000 l    df *ABS*	00000000 libgcc2.c
+00000000 l    df *ABS*	00000000 libgcc2.c
+00000000 l    df *ABS*	00000000 addsf3.c
+00000000 l    df *ABS*	00000000 divsf3.c
+00000000 l    df *ABS*	00000000 eqsf2.c
+00000000 l    df *ABS*	00000000 gesf2.c
+00000000 l    df *ABS*	00000000 lesf2.c
+00000000 l    df *ABS*	00000000 mulsf3.c
+00000000 l    df *ABS*	00000000 subsf3.c
+00000000 l    df *ABS*	00000000 unordsf2.c
+00000000 l    df *ABS*	00000000 fixsfsi.c
+00000000 l    df *ABS*	00000000 floatsisf.c
+00000000 l    df *ABS*	00000000 floatunsisf.c
+00000000 l    df *ABS*	00000000 divdf3.c
+00000000 l    df *ABS*	00000000 extendsfdf2.c
+00000000 l    df *ABS*	00000000 truncdfsf2.c
+00000000 l    df *ABS*	00000000 unwind-arm.c
+00001bf0 l     F .text	00000016 selfrel_offset31
+00001c08 l     F .text	00000074 search_EIT_table
+00001c7c l     F .text	00000028 __gnu_unwind_get_pr_addr
+00001ca4 l     F .text	0000009c get_eit_entry
+00001d40 l     F .text	00000056 restore_non_core_regs
+00001d98 l     F .text	0000000c _Unwind_decode_typeinfo_ptr.isra.0
+00001da4 l     F .text	00000004 __gnu_unwind_24bit.isra.1
+00001da8 l     F .text	00000002 _Unwind_DebugHook
+00001dac l     F .text	0000003c unwind_phase2
+00001de8 l     F .text	000000d8 unwind_phase2_forced
+00001fd8 l     F .text	00000018 _Unwind_GetGR
+00002024 l     F .text	00000018 _Unwind_SetGR
+000020ac l     F .text	000002f0 __gnu_unwind_pr_common
+00000000 l    df *ABS*	00000000 libunwind.o
+00000000 l    df *ABS*	00000000 pr-support.c
+0000276c l     F .text	00000032 next_unwind_byte
+000027a0 l     F .text	00000018 _Unwind_GetGR.constprop.0
+000027b8 l     F .text	00000008 unwind_UCB_from_context
+00000000 l    df *ABS*	00000000 _clzsi2.o
+00000000 l    df *ABS*	00000000 lib_a-strcmp.o
+00000000 l    df *ABS*	00000000 lib_a-strlen.o
+00000000 l    df *ABS*	00000000 crt1.c
+0000dff4 l     O .rodata	00000080 ram_areas
+00000000 l    df *ABS*	00000000 ch.c
+00000000 l    df *ABS*	00000000 chcore_v6m.c
+00000000 l    df *ABS*	00000000 sercom.c
+00002f70 l     F .text	000000ba long_division
+20000b40 l     O .bss	00000002 _sercom_config
+00000000 l    df *ABS*	00000000 usart.c
+00000000 l    df *ABS*	00000000 spi.c
+00000000 l    df *ABS*	00000000 i2c_master.c
+00003910 l     F .text	0000000c _i2c_master_wait_for_sync
+00003920 l     F .text	00000030 _i2c_master_address_response
+00003950 l     F .text	0000002c _i2c_master_wait_for_bus
+00003980 l     F .text	000000fc _i2c_master_read_packet
+00003a80 l     F .text	000000ac _i2c_master_write_packet
+00000000 l    df *ABS*	00000000 clock.c
+20000b44 l     O .bss	00000018 _system_clock_inst
+00000000 l    df *ABS*	00000000 gclk.c
+00000000 l    df *ABS*	00000000 rtc_calendar.c
+00000000 l    df *ABS*	00000000 interrupt_sam_nvic.c
+20000b60 l     O .bss	00000004 cpu_irq_critical_section_counter
+20000b64 l     O .bss	00000001 cpu_irq_prev_interrupt_state
+00000000 l    df *ABS*	00000000 pinmux.c
+000045e0 l     F .text	000000a8 _system_pinmux_config
+00000000 l    df *ABS*	00000000 syscalls.c
+00000000 l    df *ABS*	00000000 system.c
+00000000 l    df *ABS*	00000000 port.c
+00000000 l    df *ABS*	00000000 dma.c
+20000b68 l     O .bss	00000004 _dma_active_resource
+00000000 l    df *ABS*	00000000 extint_callback.c
+00000000 l    df *ABS*	00000000 extint.c
+00004aa0 l     F .text	00000018 _extint_enable
+00000000 l    df *ABS*	00000000 xprintf.c
+00004c80 l     F .text	00000290 xvprintf
+20000bd4 l     O .bss	00000004 outptr
+00000000 l    df *ABS*	00000000 inv_mpu.c
+20000810 l     O .data	00000038 st
+00000000 l    df *ABS*	00000000 inv_mpu_dmp_motion_driver.c
+20000be0 l     O .bss	00000010 dmp
+0000e1ac l     O .rodata	00000bf6 dmp_memory
+00000000 l    df *ABS*	00000000 diskio.c
+00006b60 l     F .text	00000048 xchange_sd_data
+00006bb0 l     F .text	0000001e xchg_spi
+00006bd0 l     F .text	00000018 cardDeselect
+00006bf0 l     F .text	00000048 rcvr_datablock
+00006c40 l     F .text	00000040 wait_ready
+00006c80 l     F .text	0000002c cardSelect
+00006cb0 l     F .text	000000c4 send_cmd
+00006d80 l     F .text	0000004c xmit_datablock
+20000bf0 l     O .bss	00000001 CardType
+20000bf4 l     O .bss	00000004 Timer1
+20000bf8 l     O .bss	00000004 Timer2
+20000848 l     O .data	00000001 Stat
+00000000 l    df *ABS*	00000000 sam_ba_cdc.c
+00000000 l    df *ABS*	00000000 sam_ba_usb.c
+20000c08 l     O .bss	00000001 bRequest.13289
+20000c09 l     O .bss	00000001 bmRequestType.13288
+20000c0a l     O .bss	00000001 dir.13290
+20000c18 l     O .bss	00000002 wIndex.13292
+20000c1a l     O .bss	00000002 wLength.13293
+20000c1c l     O .bss	00000002 wStatus.13294
+20000c1e l     O .bss	00000002 wValue.13291
+20000854 l     O .data	00000043 cfgDescriptor
+0000eda4 l     O .rodata	00000012 devDescriptor
+00000000 l    df *ABS*	00000000 board_driver_usb.c
+20000c20 l     O .bss	00000001 read_job
+00000000 l    df *ABS*	00000000 adcThread.c
+00000000 l    df *ABS*	00000000 ff.c
+00007f10 l     F .text	00000016 ld_dword
+00007f30 l     F .text	00000010 st_dword
+00007f40 l     F .text	00000014 mem_cpy
+00007f60 l     F .text	0000001a mem_cmp
+00007f80 l     F .text	00000018 clst2sect
+00007fa0 l     F .text	0000001c sum_sfn
+00007fc0 l     F .text	00000056 get_ldnumber
+00008020 l     F .text	00000036 validate
+00008060 l     F .text	0000004c sync_window
+000080b0 l     F .text	00000036 move_window
+000080f0 l     F .text	00000062 dir_clear
+00008160 l     F .text	0000011a get_fileinfo
+00008280 l     F .text	000000a0 sync_fs
+00008320 l     F .text	00000144 put_fat
+00008470 l     F .text	00000018 st_clust
+00008490 l     F .text	000000e0 get_fat
+00008570 l     F .text	000000b0 dir_sdi
+00008620 l     F .text	0000010a create_chain
+00008730 l     F .text	00000086 remove_chain
+000087c0 l     F .text	000000c8 dir_next
+00008890 l     F .text	000001a4 dir_find
+00008a40 l     F .text	00000354 dir_register
+00008da0 l     F .text	0000008c check_fs
+00008e30 l     F .text	00000358 find_volume
+00009190 l     F .text	00000158 dir_read
+000092f0 l     F .text	00000022 ld_clust
+00009320 l     F .text	00000392 follow_path
+20000db0 l     O .bss	00000004 FatFs
+20000db4 l     O .bss	00000002 Fsid
+20000db8 l     O .bss	00000200 LfnBuf
+0000edec l     O .rodata	00000080 ExCvt
+0000ee6c l     O .rodata	0000000d LfnOfs
+00000000 l    df *ABS*	00000000 ffunicode.c
+0000eec0 l     O .rodata	000001f2 cvt1.4344
+0000f0b4 l     O .rodata	000000bc cvt2.4345
+0000f170 l     O .rodata	00000100 uc437
+00000000 l    df *ABS*	00000000 TinyGPS++.cpp
+00000000 l    df *ABS*	00000000 MadgwickAHRS.cpp
+00000000 l    df *ABS*	00000000 usbThread.cpp
+20001100 l     O .bss	00000004 _ZL2fs
+20001104 l     O .bss	00000080 _ZL4line
+20001184 l     O .bss	00000002 _ZL7lineIdx
+00000000 l    df *ABS*	00000000 main.cpp
+0000ccd0 l     F .text	000002f0 _ZL8ThreadSDPv
+0000cfc0 l     F .text	0000006c _ZL12ThreadMinutePv
+20001e60 l     O .bss	00002000 _ZL10fileBuffer
+20003e60 l     O .bss	000004c8 _ZL10waThreadSD
+20004328 l     O .bss	000004c8 _ZL11waThreadADC
+200047f0 l     O .bss	000004c8 _ZL11waThreadGPS
+20004cb8 l     O .bss	000004c8 _ZL11waThreadMPU
+20005180 l     O .bss	000004c8 _ZL11waThreadUSB
+20005648 l     O .bss	000004c8 _ZL13waThreadUsart
+20005b10 l     O .bss	000004c8 _ZL14waThreadMinute
+20005fd8 l     O .bss	00000004 _ZL15minutes_counter
+20005fdc l     O .bss	00000234 _ZL5fatFS
+0000f80c l     O .rodata	00000008 _ZL11startString
+0000f824 l     O .rodata	00000008 _ZL13newFileString
+00000000 l    df *ABS*	00000000 wf_asin.c
+00000000 l    df *ABS*	00000000 wf_atan2.c
+00000000 l    df *ABS*	00000000 wf_sqrt.c
+00000000 l    df *ABS*	00000000 ef_asin.c
+00000000 l    df *ABS*	00000000 ef_atan2.c
+00000000 l    df *ABS*	00000000 ef_sqrt.c
+00000000 l    df *ABS*	00000000 s_matherr.c
+00000000 l    df *ABS*	00000000 s_nan.c
+00000000 l    df *ABS*	00000000 sf_atan.c
+0000fa84 l     O .rodata	00000010 atanhi
+0000fa94 l     O .rodata	00000010 atanlo
+00000000 l    df *ABS*	00000000 sf_fabs.c
+00000000 l    df *ABS*	00000000 abort.c
+00000000 l    df *ABS*	00000000 atol.c
+00000000 l    df *ABS*	00000000 errno.c
+00000000 l    df *ABS*	00000000 memcmp.c
+00000000 l    df *ABS*	00000000 memcpy-stub.c
+00000000 l    df *ABS*	00000000 memset.c
+00000000 l    df *ABS*	00000000 signal.c
+00000000 l    df *ABS*	00000000 signalr.c
+00000000 l    df *ABS*	00000000 strcpy.c
+00000000 l    df *ABS*	00000000 strncmp.c
+00000000 l    df *ABS*	00000000 strncpy.c
+00000000 l    df *ABS*	00000000 strtol.c
+0000dc10 l     F .text	0000010c _strtol_l.isra.0
+00000000 l    df *ABS*	00000000 locale.c
+00000000 l    df *ABS*	00000000 mbtowc_r.c
+00000000 l    df *ABS*	00000000 wctomb_r.c
+00000000 l    df *ABS*	00000000 ctype_.c
+00000000 l    df *ABS*	00000000 s_lib_ver.c
+00000000 l    df *ABS*	00000000 impure.c
+200008a0 l     O .data	00000060 impure_data
+20001188 g     O .bss	00000488 console_buffer
+0000270c g     F .text	00000030 .hidden ___Unwind_ForcedUnwind
+00001ec4 g     F .text	00000054 .hidden __gnu_Unwind_RaiseException
+20001db8 g     O .bss	00000004 usart_gps_errors
+00002c00  w    F .text	00000002 Vector58
+00002c00  w    F .text	00000002 Vector9C
+0000dbb4 g     F .text	00000010 strcpy
+00002c00  w    F .text	00000002 VectorAC
+000046e0 g     F .text	00000006 _getpid
+00002da0 g     F .text	00000058 chSysTimerHandlerI
+0000a730 g     F .text	00000528 _ZN8Madgwick9updateIMUEffffff
+20001620 g     O .bss	00000004 cur_ptr
+00002e50 g     F .text	00000050 chSchGoSleepTimeoutS
+0000a310 g     F .text	00000010 _ZN14TinyGPSInteger6commitEv
+00002c00  w    F .text	00000002 DebugMon_Handler
+000045b0 g     F .text	00000030 cpu_irq_leave_critical
+0000c6c0 g     F .text	00000130 _Z13configure_imuv
+20000b5c g     O .bss	00000004 _rtc_instance
+0000a210 g     F .text	0000000e _ZN11TinyGPSTime7setTimeEPKc
+00000000 g       .ARM.exidx	00000000 __ram4_start__
+00005670 g     F .text	000000c4 mpu_read_fifo_stream
+00006610 g     F .text	0000002e dmp_set_shake_reject_thresh
+0000db88 g     F .text	00000024 _kill_r
+20000ca4 g     O .bss	00000080 udd_ep_out_cache_buffer
+00007a60 g     F .text	0000010c USB_Init
+0000a2d0 g     F .text	00000018 _ZN11TinyGPSTime6secondEv
+00004b20 g     F .text	00000014 extint_chan_get_config_defaults
+00000000 g       .ram5	00000000 __ram5_clear__
+000061b0 g     F .text	00000090 mpu_set_dmp_state
+00002c10  w    F .text	00000016 HardFault_Handler
+20006448 g     O .bss	00000008 rtc_instance
+00005260 g     F .text	00000098 mpu_set_gyro_fsr
+00005940 g     F .text	000000e8 mpu_lp_accel_mode
+00007d00 g     F .text	0000000c USB_SetAddress
+00006310 g     F .text	0000006c dmp_set_fifo_rate
+00003060 g     F .text	0000008e _sercom_get_async_baud_val
+20006468 g       .ram0_init	00000000 __ram0_init__
+000043d0 g     F .text	0000003e rtc_calendar_register_value_to_time
+00005300 g     F .text	0000004c mpu_get_accel_fsr
+0000d100 g     F .text	00000038 SysTick_Handler
+00002c00  w    F .text	00000002 Vector8C
+0000e150 g     O .rodata	0000002a reg
+20000b80 g     O .bss	00000010 descriptor_section
+00000000 g       .ram1	00000000 __ram1_free__
+000058c0 g     F .text	00000080 mpu_set_int_latched
+20000c24 g     O .bss	00000080 udd_ep_in_cache_buffer
+0000a1f0 g     F .text	00000010 _ZN11TinyGPSDate6commitEv
+00000000 g       .ARM.exidx	00000000 __ram6_start__
+00002658 g     F .text	00000000 .hidden __gnu_Unwind_Save_VFP
+000026dc g     F .text	00000030 .hidden _Unwind_Resume_or_Rethrow
+00002f10 g     F .text	00000012 PendSV_Handler
+20001e54 g     O .bss	0000000c packet
+0000c560 g     F .text	00000028 NMI_Handler
+00000000 g     O .vectors	000000b0 _vectors
+0000fdd8 g       .ARM.exidx	00000000 __exidx_end
+20000bd8 g     O .bss	00000004 xfunc_in
+00004700 g     F .text	00000018 system_init
+20001dac g     O .bss	0000000c usart_gps
+20000b90 g     O .bss	00000001 g_chan_interrupt_flag
+00004410 g     F .text	00000014 rtc_calendar_set_time
+0000239c g     F .text	0000000a .hidden __aeabi_unwind_cpp_pr0
+0000dac6 g     F .text	0000000c atol
+00004330 g     F .text	00000014 rtc_calendar_enable
+0000dad4 g     F .text	0000000c __errno
+0000c0e0 g     F .text	000000d8 SERCOM1_Handler
+0000c590 g     F .text	00000050 i2c_write
+00004540 g     F .text	0000002e rtc_calendar_frequency_correction
+20001dc0 g     O .bss	00000004 _gSense
+00005620 g     F .text	00000044 mpu_get_int_status
+00002ae4 g     F .text	0000000a .hidden _Unwind_GetRegionStart
+20006468 g       .ram0	00000000 __ram0_free__
+00005fe0 g     F .text	00000074 mpu_write_mem
+00003b30 g     F .text	00000134 i2c_master_init
+000026dc g     F .text	00000030 .hidden ___Unwind_Resume_or_Rethrow
+20006468 g       .heap	00000000 __heap_base__
+0000b6e0 g     F .text	00000048 uart1_getc
+00007a40 g     F .text	0000001c USB_Open
+20006464 g     O .bss	00000004 errno
+00003e60 g     F .text	00000080 system_clock_source_dfll_set_config
+0000273c g     F .text	00000030 .hidden _Unwind_Backtrace
+000053e0 g     F .text	00000094 mpu_set_lpf
+00004fa0 g     F .text	00000044 mpu_read_reg
+000005b8 g     F .text	00000324 .hidden __aeabi_fadd
+00009f50 g     F .text	000000a4 ff_wtoupper
+20001624 g     O .bss	00000004 curr_desc
+00004870 g     F .text	0000007c dma_start_transfer_job
+00002628 g     F .text	0000002a .hidden __restore_core_regs
+00002668 g     F .text	00000000 .hidden __gnu_Unwind_Save_VFP_D_16_to_31
+00007430 g     F .text	00000020 cdc_getc
+0000d340 g     F .text	000000a4 sqrtf
+00010044 g       *ABS*	00000000 __ram3_init_text__
+00005490 g     F .text	0000006c mpu_set_compass_sample_rate
+0000a290 g     F .text	00000018 _ZN11TinyGPSTime4hourEv
+000048f0 g     F .text	000000a8 dma_descriptor_create
+00005550 g     F .text	00000054 mpu_get_accel_sens
+0000a000 g     F .text	000000b6 _ZN11TinyGPSPlusC1Ev
+20000fe8 g     O .bss	00000118 Finfo
+00002c00  w    F .text	00000002 Vector94
+00000000 g       *ABS*	00000000 __ram5_end__
+0000a000 g     F .text	000000b6 _ZN11TinyGPSPlusC2Ev
+00005b00 g     F .text	000001dc mpu_set_sensors
+00000000 g       .ram5	00000000 __ram5_noinit__
+00000000 g       *ABS*	00000000 __ram5_size__
+00002c00  w    F .text	00000002 VectorA8
+00001ec0 g     F .text	00000004 .hidden _Unwind_GetCFA
+00007450 g     F .text	00000024 cdc_is_rx_ready
+0000dafe g     F .text	00000012 memcpy
+00001ff0 g     F .text	00000032 .hidden _Unwind_VRS_Set
+0000050c g     F .text	00000012 .hidden __aeabi_fcmpgt
+00006ec0 g     F .text	000001a0 disk_initialize
+0000b890 g     F .text	000000b4 SERCOM2_Handler
+20001834 g     O .bss	00000044 gps_buffer
+00002d80 g     F .text	0000001c chSchReadyI
+000000b8 g       .xtors	00000000 __fini_array_end
+20000800 g       .pstack	00000000 __main_thread_stack_end__
+000042e0 g     F .text	00000018 system_gclk_chan_set_config
+0000fbb0 g       .rodata	00000000 __rodata_end__
+000001d4 g     F .text	0000010a .hidden __udivsi3
+0000db20 g     F .text	00000054 _raise_r
+00003c80 g     F .text	00000010 i2c_master_write_packet_wait_no_stop
+00003660 g     F .text	000002a8 spi_init
+000012a4 g     F .text	000000a0 .hidden __aeabi_i2f
+000074c0 g     F .text	00000020 usb_init
+0000d180 g     F .text	00000028 RTC_Handler
+20001ab0 g     O .bss	00000200 string2
+00002c50  w    F .text	00000002 UsageFault_Handler
+00000c38 g     F .text	00000084 .hidden __lesf2
+20000a70 g       .bss	00000000 _bss_start
+0000dbac g     F .text	00000008 _getpid_r
+00006ea0 g     F .text	00000014 disk_status
+20006450 g     O .bss	00000010 writeTypeCount
+00006580 g     F .text	0000002a dmp_set_tap_count
+20008000 g       .heap	00000000 __heap_end__
+000044b0 g     F .text	00000084 rtc_calendar_init
+0000203c g     F .text	00000070 .hidden __gnu_Unwind_Backtrace
+000046f0  w    F .text	00000002 _system_divas_init
+0000be40 g     F .text	00000044 _Z11ThreadUsartPv
+20000bdc g     O .bss	00000004 xfunc_out
+00000000 g       *ABS*	00000000 __ram1_size__
+00004570 g     F .text	00000040 cpu_irq_enter_critical
+00002c00  w    F .text	00000002 Vector40
+000041d0 g     F .text	0000007c system_gclk_gen_get_hz
+00002660 g     F .text	00000000 .hidden __gnu_Unwind_Save_VFP_D
+00007540 g     F .text	00000464 sam_ba_usb_CDC_Enumerate
+20001e40 g     O .bss	00000002 imuStatus
+0000dab0 g     F .text	00000006 fabsf
+00000000 g       .ram1	00000000 __ram1_clear__
+000071a0 g     F .text	00000204 disk_ioctl
+20001e14 g     O .bss	00000004 imuCount
+000023c0 g     F .text	00000268 .hidden _Unwind_VRS_Pop
+20001e00 g     O .bss	00000004 gy
+000023b4  w    F .text	0000000a .hidden __aeabi_unwind_cpp_pr2
+0000cbd0 g     F .text	00000054 _Z8date2doyjjj
+00004a40 g     F .text	00000054 EIC_Handler
+0000273c g     F .text	00000030 .hidden ___Unwind_Backtrace
+20001dd0 g     O .bss	00000004 az
+20000800 g     O .data	00000001 g_interrupt_enabled
+000013d0 g     F .text	00000668 .hidden __aeabi_ddiv
+00000000 g       .ram7	00000000 __ram7_free__
+00000000 g       *ABS*	00000000 __ram4_size__
+20001630 g     O .bss	00000200 gpsMessage
+0000a6d0 g     F .text	00000058 _ZN8Madgwick7invSqrtEf
+20001880 g     O .bss	00000010 gps_dma_descriptor_rx1
+00000b6c g     F .text	0000004c .hidden __nesf2
+0000ac60 g     F .text	000009a8 _ZN8Madgwick6updateEfffffffff
+00000000 g       *ABS*	00000000 __ram1_end__
+00000000 g       *ABS*	00000000 __ram4_end__
+0000fc10 g       .ARM.exidx	00000000 __exidx_start
+000040e0 g     F .text	000000b0 system_gclk_gen_set_config
+0000c7f0 g     F .text	000003d0 _Z9ThreadMPUPv
+0000a600 g     F .text	000000ac _ZN11TinyGPSPlus6encodeEc
+0000a330 g     F .text	0000001c _ZN13TinyGPSCustom6commitEv
+20000898 g     O .data	00000001 __fdlib_version
+20001e48 g     O .bss	00000004 my
+00010044 g       *ABS*	00000000 __ram0_init_text__
+00000534 g     F .text	00000054 .hidden __aeabi_lmul
+00010044 g       *ABS*	00000000 __ram1_init_text__
+200018a4 g     O .bss	00000004 nmeaCount
+0000cc70 g     F .text	0000005c writeFile
+0000267c g     F .text	00000030 .hidden ___Unwind_RaiseException
+0000dab8 g     F .text	0000000e abort
+000026ac g     F .text	00000030 .hidden ___Unwind_Resume
+00002c60 g     F .text	00000064 HardFault_HandlerC
+0000c1c0 g     F .text	0000035c _Z9ThreadGPSPv
+00008000 g       *ABS*	00000000 __ram0_size__
+000060e0 g     F .text	000000c8 mpu_load_firmware
+00003030 g     F .text	00000028 _sercom_get_sync_baud_val
+00010044 g       *ABS*	00000000 __ram5_init_text__
+2000084c g     O .data	00000008 line_coding
+20006210 g     O .bss	00000001 alarm
+000058b0 g     F .text	00000010 mpu_set_int_level
+0000dd1c g     F .text	00000028 strtol
+00003d60 g     F .text	0000003c system_clock_source_osc8m_set_config
+00004f10 g     F .text	00000018 xprintf
+00002cd0 g     F .text	00000014 chSysHalt
+000074a0 g     F .text	0000001c software_reset_mcu
+00001adc g     F .text	00000114 .hidden __aeabi_d2f
+0000266c g     F .text	00000000 .hidden __gnu_Unwind_Restore_WMMXD
+20006468 g       .bss	00000000 _bss_end
+00005740 g     F .text	00000170 mpu_set_bypass
+00009ee0 g     F .text	0000003c ff_uni2oem
+00000efc g     F .text	00000338 .hidden __aeabi_fsub
+00006b50 g     F .text	0000000c dmp_register_tap_cb
+000049a0 g     F .text	0000002a dma_add_descriptor
+00006380 g     F .text	00000010 dmp_get_fifo_rate
+000000c0 g     F .text	00000000 Reset_Handler
+00001234 g     F .text	00000030 .hidden __aeabi_fcmpun
+00004b40 g     F .text	00000074 extint_chan_set_config
+20006214 g     O .bss	00000004 fileBufferReadIdx
+00004f60 g     F .text	00000034 set_int_enable
+00006770 g     F .text	000001ec dmp_enable_feature
+00000520 g     F .text	00000012 .hidden __aeabi_fcmpge
+000079b0 g     F .text	00000090 USB_IsConfigured
+0000b7c0 g     F .text	000000d0 _Z23configure_usart_consolev
+20000a70 g     O .bss	000000d0 nil
+00002c00  w    F .text	00000002 USB_Handler
+00003cb0 g     F .text	00000018 i2c_master_write_byte
+20000b70 g     O .bss	00000010 _write_back_section
+00002c00  w    F .text	00000002 Vector54
+00004430 g     F .text	00000044 rtc_calendar_get_time
+00002c00  w    F .text	00000002 Vector98
+00000000 g       .ram4	00000000 __ram4_clear__
+00007e30 g     F .text	000000dc ThreadADC
+00000000 g       .ram5	00000000 __ram5_free__
+00000bb8 g     F .text	00000080 .hidden __gtsf2
+00010044 g       *ABS*	00000000 __ram6_init_text__
+0000cc40 g     F .text	00000028 _Z13writeFileCharc
+20000897 g     O .data	00000001 setTime
+00002c00  w    F .text	00000002 Vector24
+00000000 g       .ram3	00000000 __ram3_clear__
+00002bb0  w    F .text	00000002 __default_exit
+00000000 g       *ABS*	00000000 __ram6_end__
+000004f8 g     F .text	00000012 .hidden __aeabi_fcmple
+00004a20 g     F .text	00000020 extint_chan_disable_callback
+00000000 g       .ram6_init	00000000 __ram6_init__
+00002654 g     F .text	00000000 .hidden __gnu_Unwind_Restore_VFP
+00002e20 g     F .text	0000002c chSchDoReschedule
+20001dc8 g     O .bss	00000004 ax
+20001cb0 g     O .bss	000000d8 tgps
+0000a1c0 g     F .text	0000002a _ZN15TinyGPSLocation6commitEv
+00002cf0 g     F .text	00000084 chSysInit
+0000d3e4 g     F .text	000002a4 __ieee754_asinf
+20001dc4 g     O .bss	00000004 _mSense
+00000000 g       .ram7_init	00000000 __ram7_init__
+00002c10  w    F .text	00000016 _HardFault_Handler
+00000000 g       .ram6	00000000 __ram6_free__
+00002ea0 g     F .text	00000010 chThdSleep
+00004350 g     F .text	0000001a rtc_calendar_disable
+000002e8 g     F .text	00000000 .hidden __aeabi_idiv
+00002c00  w    F .text	00000002 Vector84
+00000000 g       .ram2	00000000 __ram2_noinit__
+000026ac g     F .text	00000030 .hidden _Unwind_Resume
+00001f94 g     F .text	00000010 .hidden _Unwind_DeleteException
+00001f90 g     F .text	00000002 .hidden _Unwind_Complete
+00007d10 g     F .text	0000006c USB_Configure
+2000621c g     O .bss	00000228 loggingFile
+00000000 g       .ram6	00000000 __ram6_noinit__
+00004ac0 g     F .text	00000060 _system_extint_init
+00002b14 g     F .text	0000003c .hidden __clzsi2
+00004bc0 g     F .text	00000060 extint_nmi_set_config
+00000000 g       .ram4_init	00000000 __ram4_init__
+00007c20 g     F .text	0000008c USB_Read
+0000a270 g     F .text	00000018 _ZN11TinyGPSDate3dayEv
+20000c0c g     O .bss	0000000c sam_ba_cdc
+00004c60 g     F .text	00000018 xputs
+00000000 g       .ram7	00000000 __ram7_clear__
+000073b0 g     F .text	00000058 disk_timerproc
+00007cd0 g     F .text	00000030 USB_SendZlp
+0000e17c g     O .rodata	00000030 test
+00005500 g     F .text	00000050 mpu_get_gyro_sens
+00009bc0 g     F .text	00000024 f_close
+00007410 g     F .text	00000020 cdc_putc
+20000800 g       .data	00000000 _data_start
+00000000 g       *ABS*	00000000 __ram7_size__
+20000b94 g     O .bss	00000040 _extint_dev
+00006530 g     F .text	00000048 dmp_set_tap_axes
+00006060 g     F .text	00000074 mpu_read_mem
+00002c00  w    F .text	00000002 SERCOM5_Handler
+00004370 g     F .text	0000001e rtc_calendar_reset
+20000d24 g     O .bss	00000080 usb_endpoint_table
+00002c30  w    F .text	00000002 _MemManage_Handler
+000027c0 g     F .text	000002fa .hidden __gnu_unwind_execute
+0000a140 g     F .text	00000080 _ZN11TinyGPSPlus12parseDegreesEPKcR10RawDegrees
+00005350 g     F .text	0000008c mpu_set_accel_fsr
+00004300 g     F .text	00000028 system_gclk_chan_get_hz
+0000dbc4 g     F .text	00000022 strncmp
+0000265c g     F .text	00000000 .hidden __gnu_Unwind_Restore_VFP_D
+200018b0 g     O .bss	00000200 string1
+00000190 g     F .text	00000000 _port_switch
+20001dd4 g     O .bss	00000028 filter
+00002b80  w    F .text	00000002 __core_init
+00000000 g       .ram4	00000000 __ram4_noinit__
+00009c70 g     F .text	0000004a f_readdir
+00001264 g     F .text	00000040 .hidden __aeabi_f2iz
+0000dbe6 g     F .text	0000002a strncpy
+00004a00 g     F .text	00000020 extint_chan_enable_callback
+00000b6c g     F .text	0000004c .hidden __eqsf2
+00002ba0  w    F .text	00000002 __late_init
+00002f30 g     F .text	00000040 _port_irq_epilogue
+00000000 g       .ARM.exidx	00000000 __ram7_start__
+000074e0 g     F .text	0000005c USB_SendString
+00001f2c g     F .text	00000046 .hidden __gnu_Unwind_Resume
+00000000 g       .ram6	00000000 __ram6_clear__
+20006460 g     O .bss	00000001 writing
+000046f0  w    F .text	00000002 system_board_init
+000008dc g     F .text	00000290 .hidden __aeabi_fdiv
+00002664 g     F .text	00000000 .hidden __gnu_Unwind_Restore_VFP_D_16_to_31
+0000dae0 g     F .text	0000001e memcmp
+00004190 g     F .text	0000003c system_gclk_gen_enable
+00007480 g     F .text	0000001c cdc_write_buf
+20000a6c g       .data	00000000 _data_end
+00006960 g     F .text	000001e4 dmp_read_fifo
+0000267c g     F .text	00000030 .hidden _Unwind_RaiseException
+000004bc  w    F .text	00000002 .hidden __aeabi_ldiv0
+20000fb8 g     O .bss	00000030 Dir
+20006218 g     O .bss	00000004 fileBufferWriteIdx
+00000000 g       *ABS*	00000000 __ram3_size__
+00001344 g     F .text	0000008c .hidden __aeabi_ui2f
+0000fdd8 g       *ABS*	00000000 _textdata
+0000d0b0 g     F .text	0000004c get_fattime
+00006730 g     F .text	0000003c dmp_enable_6x_lp_quat
+000000b8 g       .xtors	00000000 __fini_array_start
+00000000 g       .ram2	00000000 __ram2_clear__
+00000000 g       *ABS*	00000000 __ram3_end__
+20000b91 g     O .bss	00000001 _current_channel
+00002c40  w    F .text	00000002 _BusFault_Handler
+20001628 g     O .bss	00000004 desc_to_send
+00000000 g       *ABS*	00000000 __ram2_size__
+00003300 g     F .text	000002d4 usart_init
+00000000 g       .ARM.exidx	00000000 __ram1_start__
+0000a200 g     F .text	00000010 _ZN11TinyGPSTime6commitEv
+0000dd88 g       .rodata	00000000 __rodata_base__
+20001e08 g     O .bss	0000000c i2c_master_instance
+20000da8 g     O .bss	00000004 data
+0000db10 g     F .text	00000010 memset
+20001610 g     O .bss	00000004 pCdc
+0000d7b0 g     F .text	000000b8 __ieee754_sqrtf
+00002c30  w    F .text	00000002 MemManage_Handler
+0000d1b0 g     F .text	000000e0 main
+0000d030 g     F .text	0000001c delay_ms
+00000000 g       *ABS*	00000000 __ram6_size__
+0000c5e0 g     F .text	0000004c i2c_read
+00009b20 g     F .text	00000098 f_sync
+00002c00  w    F .text	00000002 VectorA0
+00000c38 g     F .text	00000084 .hidden __ltsf2
+00010044 g       *ABS*	00000000 __ram2_init_text__
+000001d4 g     F .text	00000000 .hidden __aeabi_uidiv
+00006390 g     F .text	00000198 dmp_set_tap_thresh
+00002c00  w    F .text	00000002 SVC_Handler
+0000d868 g     F .text	00000004 matherr
+00000000 g       .ram3	00000000 __ram3_free__
+00002c00  w    F .text	00000002 EVSYS_Handler
+000000b8 g       .xtors	00000000 __init_array_end
+0000dd6e g     F .text	00000018 __ascii_wctomb
+00002c00  w    F .text	00000002 Vector7C
+0000a0c0 g     F .text	00000020 _ZN11TinyGPSPlus7fromHexEc
+000096c0 g     F .text	00000058 f_mount
+00002c00  w    F .text	00000002 SERCOM3_Handler
+00010044 g       *ABS*	00000000 __ram4_init_text__
+00000000 g       .ram1	00000000 __ram1_noinit__
+00009bf0 g     F .text	00000074 f_opendir
+00002c00  w    F .text	00000002 SERCOM4_Handler
+000066a0 g     F .text	00000048 dmp_enable_gyro_cal
+000004c8 g     F .text	00000010 .hidden __aeabi_cfcmple
+000002e8 g     F .text	000001cc .hidden __divsi3
+2000162c g     O .bss	00000004 gpsLen
+00001f18 g     F .text	00000014 .hidden __gnu_Unwind_ForcedUnwind
+200018a0 g     O .bss	00000004 last_rx_desc
+00003da0 g     F .text	000000b8 system_clock_source_xosc32k_set_config
+00009f20 g     F .text	00000030 ff_oem2uni
+000030f0 g     F .text	00000044 sercom_set_gclk_generator
+00002c00  w    F .text	00000002 Vector90
+00002eb0 g     F .text	0000001e chEvtSignalI
+00002b50 g     F .text	00000014 strcmp
+0000a320 g     F .text	0000000e _ZN14TinyGPSInteger3setEPKc
+00004250 g     F .text	00000028 system_gclk_chan_enable
+000001b0 g     F .text	00000000 _port_thread_start
+0000be90 g     F .text	000000f8 _Z9ThreadUSBPv
+00001f74 g     F .text	0000001a .hidden __gnu_Unwind_Resume_or_Rethrow
+0000e12c g     O .rodata	0000000e hw
+00002c00  w    F .text	00000002 Vector1C
+000062f0 g     F .text	0000001c dmp_load_motion_driver_firmware
+00004c20 g     F .text	00000038 xputc
+0000a220 g     F .text	0000000e _ZN11TinyGPSDate7setDateEPKc
+20001d8c g     O .bss	00000004 ubxSumError
+00004720 g     F .text	00000020 port_pin_set_config
+00002628 g     F .text	0000002a .hidden restore_core_regs
+20001e04 g     O .bss	00000004 gz
+00002678 g     F .text	00000000 .hidden __gnu_Unwind_Save_WMMXC
+0000a6b0 g     F .text	00000020 _ZN8MadgwickC1Ev
+0000d140 g     F .text	00000040 _Z6put_rc7FRESULT
+00002c00  w    F .text	00000002 Vector48
+00000000 g       .ram2_init	00000000 __ram2_init__
+00000000 g       *ABS*	00000000 __ram2_end__
+20000400 g       .pstack	00000000 __process_stack_base__
+00000bb8 g     F .text	00000080 .hidden __gesf2
+0000f9a8 g     O .rodata	000000a0 nil_thd_configs
+0000a2b0 g     F .text	0000001c _ZN11TinyGPSTime6minuteEv
+0000cc30 g     F .text	00000002 SERCOM0_Handler
+20006468 g       .ram0	00000000 __ram0_clear__
+0000a360 g     F .text	0000029c _ZN11TinyGPSPlus16endOfTermHandlerEv
+20001d88 g     O .bss	00000004 ubxCount
+00005a30 g     F .text	000000c4 mpu_set_sample_rate
+00002b04 g     F .text	00000006 .hidden _Unwind_GetTextRelBase
+20001e50 g     O .bss	00000002 nmiCount
+000046f0  w    F .text	00000002 _system_events_init
+2000089c g     O .data	00000004 _impure_ptr
+0000bfd0 g     F .text	000000bc _Z19configure_usart_gpsv
+000004d8 g     F .text	0000000c .hidden __aeabi_fcmpeq
+00003f90 g     F .text	00000120 system_clock_init
+0000d338 g     F .text	00000008 atan2f
+00000cbc g     F .text	00000240 .hidden __aeabi_fmul
+20001890 g     O .bss	00000010 gps_dma_descriptor_rx2
+00005480 g     F .text	00000010 mpu_get_compass_sample_rate
+000046f0 g     F .text	00000002 _system_dummy_init
+00000000 g       .ram3	00000000 __ram3_noinit__
+000004c0 g     F .text	00000018 .hidden __aeabi_cfrcmple
+0000dd4a g     F .text	00000024 __ascii_mbtowc
+20000800 g       .data	00000000 _data
+20001e4c g     O .bss	00000004 mz
+00003ee0 g     F .text	000000a8 system_clock_source_enable
+20006468 g       .ram0	00000000 __ram0_noinit__
+00002bc0 g     F .text	00000038 __init_ram_areas
+00000000 g       .ARM.exidx	00000000 __ram2_start__
+00002af0 g     F .text	00000012 .hidden _Unwind_GetLanguageSpecificData
+00002c00  w    F .text	00000002 Vector80
+000001bc g     F .text	00000000 _port_switch_from_isr
+0000a300 g     F .text	0000000e _ZN14TinyGPSDecimal3setEPKc
+00005ce0 g     F .text	000002f8 mpu_init
+0000d86c g     F .text	0000000c nan
+0000a0e0 g     F .text	0000005e _ZN11TinyGPSPlus12parseDecimalEPKc
+000035e0 g     F .text	00000076 spi_set_baudrate
+00000000 g       *ABS*	00000000 __ram7_end__
+000004e4 g     F .text	00000012 .hidden __aeabi_fcmplt
+0000a250 g     F .text	00000018 _ZN11TinyGPSDate5monthEv
+00001fa4 g     F .text	00000032 .hidden _Unwind_VRS_Get
+00003cd0 g     F .text	0000008c system_clock_source_get_hz
+00002ed0 g     F .text	0000003c chEvtWaitAnyTimeout
+00002674 g     F .text	00000000 .hidden __gnu_Unwind_Restore_WMMXC
+00003c70 g     F .text	0000000e i2c_master_read_packet_wait
+20000400 g       .mstack	00000000 __main_stack_end__
+000002e0 g     F .text	00000008 .hidden __aeabi_uidivmod
+000049d0 g     F .text	0000002c extint_register_callback
+20000bfc g     O .bss	0000000c spi_master_instance
+0000a6b0 g     F .text	00000020 _ZN8MadgwickC2Ev
+00000000 g       .ram5_init	00000000 __ram5_init__
+00002abc g     F .text	00000028 .hidden __gnu_unwind_frame
+0000270c g     F .text	00000030 .hidden _Unwind_ForcedUnwind
+20000a6c g       .data	00000000 _edata
+20000800 g       .pstack	00000000 _end
+00004280 g     F .text	00000054 system_gclk_chan_disable
+0000c530 g     F .text	00000028 _Z3taphh
+00004390 g     F .text	0000003a rtc_calendar_time_to_register_value
+00009940 g     F .text	000001d8 f_write
+00003c90 g     F .text	00000014 i2c_master_send_stop
+00002c00  w    F .text	00000002 _unhandled_exception
+0000a230 g     F .text	0000001a _ZN11TinyGPSDate4yearEv
+00000588 g     F .text	00000030 .hidden __aeabi_f2uiz
+00002c00  w    F .text	00000002 Vector88
+00009720 g     F .text	00000212 f_open
+000070f0 g     F .text	000000ac disk_write
+0000b730 g     F .text	00000090 uart1_putc
+20000400 g       .pstack	00000000 __main_thread_stack_base__
+00006240 g     F .text	000000b0 mpu_get_compass_reg
+00002670 g     F .text	00000000 .hidden __gnu_Unwind_Save_WMMXD
+0000b610 g     F .text	000000cc _ZN8Madgwick13computeAnglesEv
+00010044 g       *ABS*	00000000 __ram7_init_text__
+00000000 g       .ram3_init	00000000 __ram3_init__
+000046d0 g     F .text	00000002 _kill
+000004c8 g     F .text	00000010 .hidden __aeabi_cfcmpeq
+00007d80 g     F .text	000000ac extint_detection_callback
+00004480 g     F .text	0000002c rtc_calendar_set_alarm
+0000d878 g     F .text	00000238 atanf
+20000000 g       .ARM.exidx	00000000 __ram0_start__
+000065e0 g     F .text	00000022 dmp_set_tap_time_multi
+000001c0 g       .text	00000000 _port_exit_from_isr
+00000000 g       .ram1_init	00000000 __ram1_init__
+20001614 g     O .bss	0000000c usart_console
+0000faae g     O .rodata	00000101 _ctype_
+0000a2f0 g     F .text	00000010 _ZN14TinyGPSDecimal6commitEv
+20001dbc g     O .bss	00000002 usart_gps_lasterror
+200018a8 g     O .bss	00000004 rx_count
+000004bc  w    F .text	00000002 .hidden __aeabi_idiv0
+00006dd0 g     F .text	000000d0 configure_spi_master
+000000b0 g       .xtors	00000000 __init_array_start
+00004740 g     F .text	00000010 dma_get_config_defaults
+000032c0 g     F .text	00000038 _sercom_get_sercom_inst_index
+20000804 g     O .data	0000000c _dma_inst
+00009db0 g     F .text	00000128 f_mkdir
+00000588 g     F .text	00000030 .hidden __fixunssfsi
+00002e00 g     F .text	00000014 chSchIsPreemptionRequired
+00004690 g     F .text	0000002c system_pinmux_pin_set_config
+00007b70 g     F .text	000000a4 USB_Write
+000046c0 g     F .text	00000004 _exit
+0000fdd8 g       *ABS*	00000000 _textdata_start
+00004ff0 g     F .text	00000094 mpu_get_temperature
+00000000 g       .ARM.exidx	00000000 __ram5_start__
+00000534 g     F .text	00000054 .hidden __muldi3
+00004f30 g     F .text	0000002c xsprintf
+00002c40  w    F .text	00000002 BusFault_Handler
+000066f0 g     F .text	0000003c dmp_enable_lp_quat
+20001dfc g     O .bss	00000004 gx
+20006444 g     O .bss	00000003 pin_conf
+00002b64 g     F .text	0000000e strlen
+00007060 g     F .text	00000090 disk_read
+00000000 g       .ram2	00000000 __ram2_free__
+0000dd44 g     F .text	00000006 __locale_ctype_ptr_l
+000023a8  w    F .text	0000000a .hidden __aeabi_unwind_cpp_pr1
+000040b0 g     F .text	00000024 system_gclk_init
+0000a350 g     F .text	0000000a _ZN13TinyGPSCustom3setEPKc
+00002c50  w    F .text	00000002 _UsageFault_Handler
+20001dcc g     O .bss	00000004 ay
+0000b950 g     F .text	000004e4 _Z13consoleCharRxc
+00000000 g       .ram4	00000000 __ram4_free__
+20008000 g       *ABS*	00000000 __ram0_end__
+200018ac g     O .bss	00000004 rx_desc
+00003140 g     F .text	00000178 _sercom_get_default_pad
+00009cc0 g     F .text	000000e8 f_getfree
+20000000 g       .mstack	00000000 __main_stack_base__
+00002c00  w    F .text	00000002 Vector44
+00001a38 g     F .text	000000a4 .hidden __aeabi_f2d
+00002c00  w    F .text	00000002 Vector28
+20001830 g     O .bss	00000004 gpsMsgIdx
+00002b0c g     F .text	00000006 .hidden _Unwind_GetDataRelBase
+20001d90 g     O .bss	0000001c usart_dma_resource_rx
+0000d290 g     F .text	000000a8 asinf
+00000400 g       *ABS*	00000000 __main_stack_size__
+000065b0 g     F .text	00000022 dmp_set_tap_time
+20001e44 g     O .bss	00000004 mx
+0000d050 g     F .text	00000054 _Z22configure_rtc_calendarv
+00006670 g     F .text	00000022 dmp_set_shake_reject_timeout
+00000000 g       .ram7	00000000 __ram7_noinit__
+0000c630 g     F .text	00000090 _Z20configure_i2c_masterv
+00006640 g     F .text	00000022 dmp_set_shake_reject_time
+20000dac g     O .bss	00000001 eic
+20000800 g       .pstack	00000000 __process_stack_end__
+20000da4 g     O .bss	00000004 adcCount
+00002c00  w    F .text	00000002 Vector34
+000004b4 g     F .text	00000008 .hidden __aeabi_idivmod
+00002b90  w    F .text	00000002 __early_init
+00007cb0 g     F .text	00000020 USB_SendStall
+000055b0 g     F .text	00000064 mpu_configure_fifo
+00000000 g       .ARM.exidx	00000000 __ram3_start__
+20001dbe g     O .bss	00000002 _aSense
+0000c090 g     F .text	00000044 _Z10uart2_getcv
+00002c00  w    F .text	00000002 VectorA4
+20000900 g     O .data	0000016c __global_locale
+00004750 g     F .text	0000011c dma_allocate
+00000400 g       *ABS*	00000000 __process_stack_size__
+00005090 g     F .text	000001cc mpu_reset_fifo
+00002c00  w    F .text	00000002 Vector20
+0000db74 g     F .text	00000014 raise
+0000d688 g     F .text	00000128 __ieee754_atan2f
+
+

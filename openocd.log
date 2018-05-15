@@ -1,0 +1,15 @@
+Info : No device selected, using first device.
+Info : J-Link V9 compiled Dec 16 2016 15:34:10
+Info : Hardware version: 9.40
+Info : VTarget = 3.287 V
+Info : clock speed 400 kHz
+Info : SWD DPIDR 0x0bc11477
+Info : at91samd21e18.cpu: hardware has 4 breakpoints, 2 watchpoints
+Info : accepting 'gdb' connection from pipe
+Info : SAMD MCU: SAMD21G18A (256KB Flash, 32KB RAM)
+undefined debug reason 7 - target needs reset
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x21000000 pc: 0x00000fcc msp: 0x200020c8
+semihosting is enabled
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x21000000 pc: 0x00000fcc msp: 0x200020c8, semihosting
